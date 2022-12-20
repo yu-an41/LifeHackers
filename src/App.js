@@ -1,10 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+// pages
+import ToDoList from './01-to-do-list/ToDoList'
 
 function App() {
-  return (
-    <></>
-  );
+  return <ToDoList />
 }
 
-export default App;
+export default App
