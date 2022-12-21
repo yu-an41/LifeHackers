@@ -3,7 +3,7 @@
 import React, { useState, useReducer } from 'react'
 import ToDo from './ToDo'
 import { ACTIONS } from './Actions'
-// import './ToDoList.scss'
+import './ToDoList.scss'
 
 const reducer = (todos, action) => {
   // console.log(todos, action)
@@ -38,12 +38,15 @@ function ToDoList() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    dispatch({ type: ACTIONS.ADD, payload: { toDoContent: toDoContent } })
+    if (toDoContent.trim()) {
+      dispatch({ type: ACTIONS.ADD, payload: { toDoContent: toDoContent } })
+    }
+    SetToDoContent('')
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className="todo-container">
+      <form>
         <input
           type="text"
           value={toDoContent}
@@ -52,6 +55,9 @@ function ToDoList() {
           }}
           placeholder="Type in something..."
         />
+        <button type="submit" onClick={handleSubmit}>
+          送出
+        </button>
       </form>
 
       {todos.map((todo) => {

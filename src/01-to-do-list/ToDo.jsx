@@ -1,6 +1,6 @@
 import React from 'react'
 import { ACTIONS } from './Actions'
-// import './ToDo.scss'
+import './ToDo.scss'
 
 const ToDo = ({ todo, dispatch }) => {
   return (
@@ -9,7 +9,7 @@ const ToDo = ({ todo, dispatch }) => {
         {todo.toDoContent}
       </span>
       <button
-        className="toggle"
+        className="toggle my-btn"
         onClick={() => {
           dispatch({ type: ACTIONS.TOGGLE, payload: { id: todo.id } })
         }}
@@ -17,7 +17,7 @@ const ToDo = ({ todo, dispatch }) => {
         {todo.complete ? 'Cancel' : 'Complete'}
       </button>
       <button
-        className="delete"
+        className="delete my-btn"
         onClick={() => {
           dispatch({ type: ACTIONS.DELETE, payload: { id: todo.id } })
         }}

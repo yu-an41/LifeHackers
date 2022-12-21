@@ -1,0 +1,33 @@
+.todo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+    margin-bottom: 10px;
+    span {
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 20px;
+        margin-right: 10px;
+        flex-grow: 1;
+    }
+    .my-btn {
+        padding: 4px 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        background: none;
+        color: #222;
+    }
+    .my-btn:hover {
+        background-color: rgba(255, 255, 255, 0.55);
+    }
+    .toggle {
+        border: 2px solid lightgreen;
+        margin-right: 10px;
+    }
+    .delete {
+        border: 2px solid coral;
+    }
+}
