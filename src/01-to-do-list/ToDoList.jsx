@@ -38,6 +38,7 @@ const newTodo = (toDoContent) => {
 function ToDoList() {
   const [todos, dispatch] = useReducer(reducer, [])
   const [toDoContent, SetToDoContent] = useState('')
+  const [todoTab, setTodoTab] = useState(true)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -66,16 +67,26 @@ function ToDoList() {
       </form>
       <div className="todo-bottom">
         <div className="todo-tabs">
-          <div className="tab-wrap incomplete">To Do</div>
-          <div className="tab-wrap complete">Done</div>
+          <div
+            className="tab-wrap incomplete"
+            style={{ backgroundColor: todoTab ? 'white' : null }}
+          >
+            To Do
+          </div>
+          <div
+            className="tab-wrap complete"
+            style={{ backgroundColor: todoTab ? null : 'white' }}
+          >
+            Done
+          </div>
         </div>
         <div className="todo-body">
-          <div className="todo-imcomplete">
+          <div className="todo-wrap todo-imcomplete">
             {todos.map((todo, i) => {
-              return <ToDo todo={todo} dispatch={dispatch} index={i+1} />
+              return <ToDo todo={todo} dispatch={dispatch} index={i + 1} />
             })}
           </div>
-          <div className="todo-complete"></div>
+          <div className="todo-wrap todo-complete"></div>
         </div>
       </div>
     </div>

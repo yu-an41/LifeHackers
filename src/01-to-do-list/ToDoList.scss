@@ -32,4 +32,44 @@ body {
             color: #444;
         }
     }
+    .todo-bottom {
+        .todo-tabs {
+            display: flex;
+            // justify-content: center;
+            border-radius: 5px;
+            .tab-wrap {
+                padding: 6px 20px;
+                border: 2px solid white;
+                font-size: 16px;
+                letter-spacing: 1px;
+                font-weight: bold;
+                color: #333;
+            }
+
+            .incomplete {
+                border-right: none;
+                border-radius: 5px 0 0 5px;
+            }
+
+            .complete {
+                border-radius: 0 5px 5px 0;
+            }
+        }
+    }
+    .todo-body {
+        // border: 2px dashed #5e5e5e;
+        // border-radius: 0 0 5px 5px;
+        // padding: 20px 10px;
+        .todo-wrap {
+
+        }
+
+        .todo-imcomplete {
+
+        }
+
+        .todo-complete {
+
+        }
+    }
 }
