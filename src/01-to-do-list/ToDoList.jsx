@@ -20,6 +20,8 @@ const reducer = (todos, action) => {
       })
     case ACTIONS.DELETE:
       return todos.filter((todo) => todo.id !== id)
+    case ACTIONS.EDIT:
+      return
     default:
       return todos
   }
@@ -32,6 +34,7 @@ const newTodo = (toDoContent) => {
     complete: false,
   }
 }
+
 function ToDoList() {
   const [todos, dispatch] = useReducer(reducer, [])
   const [toDoContent, SetToDoContent] = useState('')
@@ -43,6 +46,8 @@ function ToDoList() {
     }
     SetToDoContent('')
   }
+
+  // const doneTodo = todos.filter((todo) => todo.complete === true)
 
   return (
     <div className="todo-container">
@@ -59,10 +64,20 @@ function ToDoList() {
           送出
         </button>
       </form>
-
-      {todos.map((todo) => {
-        return <ToDo todo={todo} dispatch={dispatch} />
-      })}
+      <div className="todo-bottom">
+        <div className="todo-tabs">
+          <div className="tab-wrap incomplete">To Do</div>
+          <div className="tab-wrap complete">Done</div>
+        </div>
+        <div className="todo-body">
+          <div className="todo-imcomplete">
+            {todos.map((todo, i) => {
+              return <ToDo todo={todo} dispatch={dispatch} index={i+1} />
+            })}
+          </div>
+          <div className="todo-complete"></div>
+        </div>
+      </div>
     </div>
   )
 }

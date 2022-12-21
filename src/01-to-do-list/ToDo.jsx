@@ -2,11 +2,16 @@ import React from 'react'
 import { ACTIONS } from './Actions'
 import './ToDo.scss'
 
-const ToDo = ({ todo, dispatch }) => {
+const ToDo = ({ todo, dispatch, index }) => {
   return (
     <div className="todo">
-      <span style={{ textDecoration: todo.complete ? 'line-through' : null }}>
-        {todo.toDoContent}
+      <span
+        style={{ textDecoration: todo.complete ? 'line-through' : null }}
+        onClick={() => {
+          // dispatch({ type: ACTIONS.EDIT, payload: { id: todo.id } })
+        }}
+      >
+        {index}. {todo.toDoContent}
       </span>
       <button
         className="toggle my-btn"
