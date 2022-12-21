@@ -1,16 +1,35 @@
+/* eslint-disable default-case */
 // plugins & extensions
 import React, { useState, useReducer } from 'react'
-
+import ToDo from './ToDo'
+import { ACTIONS } from './Actions'
 // import './ToDoList.scss'
 
 const reducer = (todos, action) => {
-  console.log(todos, action)
+  // console.log(todos, action)
+  const { toDoContent, id } = action.payload
   switch (action.type) {
-    case 'ADD':
-      return [
-        ...todos,
-        { toDoContent: action.payload.toDoContent, complete: false },
-      ]
+    case ACTIONS.ADD:
+      return [...todos, newTodo(toDoContent)]
+    case ACTIONS.TOGGLE:
+      return todos.map((todo) => {
+        if (todo.id === id) {
+          return { ...todo, complete: !todo.complete }
+        }
+        return todo
+      })
+    case ACTIONS.DELETE:
+      return todos.filter((todo) => todo.id !== id)
+    default:
+      return todos
+  }
+}
+
+const newTodo = (toDoContent) => {
+  return {
+    id: Math.floor(Math.random() * 100000),
+    toDoContent,
+    complete: false,
   }
 }
 function ToDoList() {
@@ -19,7 +38,7 @@ function ToDoList() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    dispatch({ type: 'ADD', payload: { toDoContent: toDoContent } })
+    dispatch({ type: ACTIONS.ADD, payload: { toDoContent: toDoContent } })
   }
 
   return (
@@ -35,7 +54,9 @@ function ToDoList() {
         />
       </form>
 
-      {todos.map((todo) => {})}
+      {todos.map((todo) => {
+        return <ToDo todo={todo} dispatch={dispatch} />
+      })}
     </div>
   )
 }
