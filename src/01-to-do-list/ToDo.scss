@@ -4,14 +4,20 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    color: #333;
     margin-bottom: 10px;
+    padding: 0 6px;
     span {
-        font-weight: bold;
         letter-spacing: 1px;
         font-size: 20px;
+    }
+    .todo-index {
         margin-right: 10px;
+        color: #555;
+    }
+    .todo-detail {
+        // font-weight: bold;
         flex-grow: 1;
+        color: #333;
     }
     .my-btn {
         padding: 4px 10px;

@@ -66,7 +66,10 @@ function ToDoList() {
         </button>
       </form>
       <div className="todo-bottom">
-        <div className="todo-tabs">
+        {/* <div
+          className="todo-tabs"
+          // onClick={setTodoTab(!todoTab)}
+        >
           <div
             className="tab-wrap incomplete"
             style={{ backgroundColor: todoTab ? 'white' : null }}
@@ -79,11 +82,13 @@ function ToDoList() {
           >
             Done
           </div>
-        </div>
+        </div> */}
         <div className="todo-body">
           <div className="todo-wrap todo-imcomplete">
             {todos.map((todo, i) => {
-              return <ToDo todo={todo} dispatch={dispatch} index={i + 1} />
+              return (
+                <ToDo todo={todo} dispatch={dispatch} index={i + 1} key={i} />
+              )
             })}
           </div>
           <div className="todo-wrap todo-complete"></div>

@@ -5,13 +5,15 @@ import './ToDo.scss'
 const ToDo = ({ todo, dispatch, index }) => {
   return (
     <div className="todo">
+      <span className="todo-index">{index}. </span>
       <span
+        className="todo-detail"
         style={{ textDecoration: todo.complete ? 'line-through' : null }}
         onClick={() => {
           // dispatch({ type: ACTIONS.EDIT, payload: { id: todo.id } })
         }}
       >
-        {index}. {todo.toDoContent}
+        {todo.toDoContent}
       </span>
       <button
         className="toggle my-btn"
