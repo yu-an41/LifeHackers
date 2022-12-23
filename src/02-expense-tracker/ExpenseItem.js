@@ -1,19 +1,18 @@
 import React from 'react'
 import dayjs from 'dayjs'
 
+import ExpenseDate from './ExpenseDate'
 import './ExpenseItem.scss'
 
-function ExpenseItem() {
-  const expenseDate = new Date(2022, 12, 22).toISOString()
-  const expenseTitle = 'Bubble tea'
-  const expenseAmount = 75
-
+function ExpenseItem({ title, amount, date }) {
   return (
     <div className="expense-item">
-      <div className="expense-date">{expenseDate}</div>
+      <div>
+        <ExpenseDate date={date} />
+      </div>
       <div className="expense-description">
-        <p className="expense-title">{expenseTitle}</p>
-        <p className="expense-amount">$ {expenseAmount}</p>
+        <p className="expense-title">{title}</p>
+        <p className="expense-amount">$ {amount}</p>
       </div>
     </div>
   )
