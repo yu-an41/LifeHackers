@@ -1,13 +1,28 @@
 import React, { useState } from 'react'
 
 // components
-import { Selection } from './Selection'
+import { AppList } from './AppList'
+// import ToDoList from '../01-to-do-list/ToDoList'
+// import ExpenseTracker from '../02-expense-tracker/ExpenseTracker'
 
 // styles and imgs
-import './Homepage.scss'
+import styles from './Homepage.module.scss'
 
 function Homepage() {
   const [displayIndex, setDispaplyIndex] = useState(0)
+
+  // const AppList = [
+  //   {
+  //     name: '待辦小管家',
+  //     path: '../01-to-do-list/ToDoList',
+  //     component: ToDoList,
+  //   },
+  //   {
+  //     name: '記帳小幫手',
+  //     path: '../02-expense-tracker/ExpenseTracker',
+  //     component: ExpenseTracker,
+  //   },
+  // ]
 
   const selection = (
     <select
@@ -16,7 +31,7 @@ function Homepage() {
         setDispaplyIndex(e.target.value)
       }}
     >
-      {Selection.map((v, i) => {
+      {AppList.map((v, i) => {
         return (
           <option key={i} value={i}>
             {v.name}
@@ -26,7 +41,7 @@ function Homepage() {
     </select>
   )
 
-  const MyComponent = Selection[displayIndex].component
+  const MyComponent = AppList[displayIndex].component
   return (
     <div className="homepage-container">
       <div className="homehomepagepae-navbar">

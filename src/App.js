@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Homepage />
-      <p>WELCOME TO LIFEHCKERS!</p>
+      {/* <p>WELCOME TO LIFEHCKERS!</p> */}
     </>
   )
 }

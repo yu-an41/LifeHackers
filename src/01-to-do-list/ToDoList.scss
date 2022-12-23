@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;        
-    min-height: 100vh;
+    min-height: calc(100vh);
     background: linear-gradient(45deg, #4e65ff, lightpink);
     form {
         margin-bottom: 40px;
