@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/LifeHackers/static/css/main.fa7fae2e.css",
-    "main.js": "/LifeHackers/static/js/main.0781c287.js",
+    "main.js": "/LifeHackers/static/js/main.ff4cfc8f.js",
     "static/js/787.445a2bae.chunk.js": "/LifeHackers/static/js/787.445a2bae.chunk.js",
     "index.html": "/LifeHackers/index.html",
     "main.fa7fae2e.css.map": "/LifeHackers/static/css/main.fa7fae2e.css.map",
-    "main.0781c287.js.map": "/LifeHackers/static/js/main.0781c287.js.map",
+    "main.ff4cfc8f.js.map": "/LifeHackers/static/js/main.ff4cfc8f.js.map",
     "787.445a2bae.chunk.js.map": "/LifeHackers/static/js/787.445a2bae.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fa7fae2e.css",
-    "static/js/main.0781c287.js"
+    "static/js/main.ff4cfc8f.js"
   ]
 }
