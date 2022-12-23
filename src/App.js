@@ -6,13 +6,14 @@ import ExpenseTracker from './02-expense-tracker/ExpenseTracker'
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/todo" element={<ToDoList />} />
-        <Route path="/expense" element={<ExpenseTracker />} />
-      </Routes>
-    </BrowserRouter>
+    <Homepage />
+    // <BrowserRouter>
+    //   <Routes>
+    //     <Route path="/" element={<Homepage />} />
+    //     <Route path="/todo" element={<ToDoList />} />
+    //     <Route path="/expense" element={<ExpenseTracker />} />
+    //   </Routes>
+    // </BrowserRouter>
   )
 }
 
