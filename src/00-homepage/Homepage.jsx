@@ -43,17 +43,17 @@ function Homepage() {
 
   const MyComponent = AppList[displayIndex].component
   return (
-    <div className="homepage-container">
-      <div className="homehomepagepae-navbar">
+    <div className={styles.homepageContainer}>
+      <div className={styles.homepageNavbar}>
         <p>navbar</p>
       </div>
-      <div className="homepage-main">
+      <div className={styles.homepageMain}>
         <div className="hompage-tabs">{selection}</div>
         <div className="hompage-body">
           <MyComponent />
         </div>
       </div>
-      <div className="homepage-footer">
+      <div className={styles.homepageFooter}>
         <p>footer</p>
       </div>
     </div>

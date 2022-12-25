@@ -1,9 +1,10 @@
 import React from 'react'
 
-import './ExpenseTracker.scss'
+import styles from './ExpenseTracker.module.scss'
 
 import ExpenseItem from './ExpenseItem'
 import ExpenseCard from './ExpenseCard'
+import NewExpense from './NewExpense'
 
 function ExpenseTracker() {
   const expenses = [
@@ -14,23 +15,24 @@ function ExpenseTracker() {
   ]
 
   return (
-    <div className="expense-tracker-page">
+    <div className={styles.expenseTrackerPage}>
+      <NewExpense />
       <ExpenseCard>
-        <div className="expense-item-wrap">
+        <div className={styles.expenseItemWrap}>
           <ExpenseItem
             title={expenses[0].title}
             amount={expenses[0].amount}
             date={expenses[0].date}
           />
         </div>
-        <div className="expense-item-wrap">
+        <div className={styles.expenseItemWrap}>
           <ExpenseItem
             title={expenses[1].title}
             amount={expenses[1].amount}
             date={expenses[1].date}
           />
         </div>
-        <div className="expense-item-wrap">
+        <div className={styles.expenseItemWrap}>
           <ExpenseItem
             title={expenses[2].title}
             amount={expenses[2].amount}
