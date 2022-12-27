@@ -1,4 +1,4 @@
-.expense-date {
+.expenseDate {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -8,21 +8,24 @@
     padding: 8px 16px;
     border: 2px solid white;
 
-    .expense-date-details {
+    .expenseDateDetails {
         color: white;
 
     }
-    .expense-date-month {
+    .expenseDateMonth {
         font-size: 12px;
         margin-bottom: 2px;
+        color: white;
     }
-    .expense-date-year {
+    .expenseDateYear {
         font-size: 12px;
         margin-bottom: 4px;
+        color: white;
     }
-    .expense-date-day {
+    .expenseDateDay {
         font-weight: bold;
         letter-spacing: 2px;
         font-size: 26px;
+        color: white;
     }
 }
