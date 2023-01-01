@@ -54,7 +54,12 @@ function Homepage() {
         </div>
       </div>
       <div className={styles.homepageFooter}>
-        <p>footer</p>
+        <ul>
+          <li>About YU AN</li>
+          <li>About LifeHackers</li>
+          <li>Reference list</li>
+          <li>Other sites</li>
+        </ul>
       </div>
     </div>
   )
