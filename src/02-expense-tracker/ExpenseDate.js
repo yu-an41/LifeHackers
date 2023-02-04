@@ -11,7 +11,7 @@ function ExpenseDate({ date }) {
       <div className={styles.expenseDateMonth}>{month}</div>
       <div className={styles.expenseDateYear}>{year}</div>
       <div className={styles.expenseDateDay}>{day}</div>
-    </div> 
+    </div>
   )
 }
 

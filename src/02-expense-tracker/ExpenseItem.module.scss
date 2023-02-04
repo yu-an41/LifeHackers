@@ -23,7 +23,7 @@
             margin-right: 20px;
             letter-spacing: 1px;
             font-weight: bold;
-            color: white;
+            // color: white;
         }
 
         .expenseAmount {
@@ -41,4 +41,7 @@
 .expenseItem:hover {
     background-color: #fff;
     // border: 2px solid #aaa;
+    .expenseTitle {
+        color: black;
+    }
 }

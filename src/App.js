@@ -10,10 +10,12 @@ import Homepage from './00-homepage/Homepage'
 
 function App() {
   return (
-    <>
-      <Homepage />
-      {/* <p>WELCOME TO LIFEHCKERS!</p> */}
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route />
+      </Routes>
+      {/* <Homepage /> */}
+    </BrowserRouter>
   )
 }
 
