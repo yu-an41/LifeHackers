@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import styles from './ExpenseTracker.module.scss'
 import Expenses from './Expenses'
 import ExpenseItem from './ExpenseItem'
 import ExpenseCard from './ExpenseCard'
+import ExpensesFilter from './ExpensesFilter'
 import NewExpense from './NewExpense'
 
 function ExpenseTracker() {
@@ -17,11 +18,21 @@ function ExpenseTracker() {
     console.log(expenses)
   }
 
+  const [filteredYear, setFilteredYear] = useState('2022')
+
+  const filterChangeHandler = (selectedYear) => {
+    setFilteredYear(selectedYear)
+  }
+
   return (
     <div className={styles.expenseTrackerPage}>
       <NewExpense onAddExpense={addExpenseHandler} />
       {/* <Expenses items={expenses} /> */}
       <ExpenseCard>
+        <ExpensesFilter
+          selected={filteredYear}
+          onChangeFilter={filterChangeHandler}
+        />
         <div className={styles.expenseItemWrap}>
           <ExpenseItem
             title={expenses[0].title}

@@ -7,18 +7,9 @@ import ExpensesFilter from './ExpensesFilter'
 import styles from './Expenses.module.scss'
 
 function Expenses(items) {
-  const [filteredYear, setFilteredYear] = useState('2022')
-
-  const filterChangeHandler = (selectedYear) => {
-    setFilteredYear(selectedYear)
-  }
   return (
     <div>
       <ExpenseCard classname="expenses">
-        <ExpensesFilter
-          selected={filteredYear}
-          onChangeFilter={filterChangeHandler}
-        />
         {items.map((expense) => (
           <Expenses
             title={expense.title}
