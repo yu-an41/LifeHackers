@@ -7,10 +7,14 @@ export default function ExpensesFilter({ selected, onChangeFilter }) {
   }
 
   return (
-    <div className="expensesFilter">
-      <div className="expensesFilterControl">
-        <label>Filter by year</label>
-        <select value={selected} onChange={dropdownChangeHandler}>
+    <div className={styles.ExpensesFilter}>
+      <div className={styles.expensesFilterControl}>
+        <label className={styles.expensesFilterLabel}>Filter by year</label>
+        <select
+          className={styles.expensesFilterSelect}
+          value={selected}
+          onChange={dropdownChangeHandler}
+        >
           <option value="2022">2022</option>
           <option value="2021">2021</option>
           <option value="2020">2020</option>
