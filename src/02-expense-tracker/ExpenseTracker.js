@@ -39,26 +39,7 @@ function ExpenseTracker() {
           onChangeFilter={filterChangeHandler}
         />
         <div className={styles.expenseItemWrap}>
-          <ExpenseItem
-            title={expenses[0].title}
-            amount={expenses[0].amount}
-            date={expenses[0].date}
-            items={expenses}
-          />
-        </div>
-        <div className={styles.expenseItemWrap}>
-          <ExpenseItem
-            title={expenses[1].title}
-            amount={expenses[1].amount}
-            date={expenses[1].date}
-          />
-        </div>
-        <div className={styles.expenseItemWrap}>
-          <ExpenseItem
-            title={expenses[2].title}
-            amount={expenses[2].amount}
-            date={expenses[2].date}
-          />
+          <ExpenseItem items={expenses} />
         </div>
       </ExpenseCard>
     </div>

@@ -5,23 +5,22 @@ import ExpenseDate from './ExpenseDate'
 import styles from './ExpenseItem.module.scss'
 
 function ExpenseItem(props) {
-  const { amount, date } = props
-  const [title, setTitle] = useState(props.title)
-  const clickHandler = () => {
-    setTitle('Updated!')
-    console.log(title)
-  }
+  // const [title, setTitle] = useState(props.title)
+  // const clickHandler = () => {
+  //   setTitle('Updated!')
+  //   console.log(title)
+  // }
 
   return (
     <div className={styles.expenseItem}>
       <div>
-        <ExpenseDate date={date} />
+        <ExpenseDate date={props.date} />
       </div>
       <div className={styles.expenseDescription}>
-        <h2 className={styles.expenseTitle}>{title}</h2>
-        <p className={styles.expenseAmount}>$ {amount}</p>
+        <h2 className={styles.expenseTitle}>{props.title}</h2>
+        <p className={styles.expenseAmount}>$ {props.amount}</p>
       </div>
-      <button onClick={clickHandler}>Change Title</button>
+      {/* <button onClick={clickHandler}>Change Title</button> */}
     </div>
   )
 }
