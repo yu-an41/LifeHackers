@@ -14,7 +14,7 @@ const DUMMY_EXPENSE = [
   { title: 'Bubble tea', date: new Date(2022, 12, 20), amount: 50 },
 ]
 
-function ExpenseTracker() {
+function ExpenseTracker(propss) {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSE)
 
   const [filteredYear, setFilteredYear] = useState('2022')
@@ -39,7 +39,18 @@ function ExpenseTracker() {
           onChangeFilter={filterChangeHandler}
         />
         <div className={styles.expenseItemWrap}>
-          <ExpenseItem items={expenses} />
+          {/* <ExpenseItem
+            title={expenses.title}
+            amount={expenses.amount}
+            date={expenses.date}
+          /> */}
+          {propss.items.map((expense) => (
+            <ExpenseItem
+              title={expenses.title}
+              amount={expenses.amount}
+              date={expenses.date}
+            />
+          ))}
         </div>
       </ExpenseCard>
     </div>
