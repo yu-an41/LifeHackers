@@ -10,13 +10,13 @@ function Expenses(items) {
   return (
     <div>
       <ExpenseCard classname="expenses">
-        {items.map((expense) => (
+        {/* {items.map((expense) => (
           <Expenses
             title={expense.title}
             amount={expense.amount}
             date={expense.date}
           />
-        ))}
+        ))} */}
       </ExpenseCard>
     </div>
   )
